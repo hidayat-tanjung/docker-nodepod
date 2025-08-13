@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-html
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-html
+  template:
+    metadata:
+      labels:
+        app: custom-html
+    spec:
+      containers:
+        - name: web
+          image: hidayat30/custom-html:latest
+          ports:
+            - containerPort: 80
