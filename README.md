@@ -3,13 +3,13 @@
 Repositori ini berisi contoh website statis sederhana yang dijalankan menggunakan Docker dan Kubernetes (NodePort).
 
 ## Struktur File
-
-- [`index.html`](c:/Users/marli/Desktop/docker-nodepod/index.html): Halaman utama website statis.
-- [`styles.css`](c:/Users/marli/Desktop/docker-nodepod/styles.css): File CSS untuk styling halaman.
-- [`Dockerfile`](c:/Users/marli/Desktop/docker-nodepod/Dockerfile): Dockerfile untuk membangun image berbasis Nginx yang menyajikan file HTML dan CSS.
-- [`deployment.yaml`](c:/Users/marli/Desktop/docker-nodepod/deployment.yaml): Manifest Kubernetes untuk deployment aplikasi.
-- [`service-nodeport.yaml`](c:/Users/marli/Desktop/docker-nodepod/service-nodeport.yaml): Manifest Kubernetes untuk service dengan tipe NodePort.
-- `minikube-linux-amd64`: Binary Minikube untuk menjalankan Kubernetes secara lokal.
+```sh
+.
+├── deployment.yaml       # Kubernetes Deployment configuration
+├── service-nodeport.yaml # Kubernetes Service configuration
+├── index.html           # Static HTML content
+└── styles.css           # CSS styling
+```
 
 ## Cara Build dan Deploy
 
