@@ -13,13 +13,20 @@ Repositori ini berisi contoh website statis sederhana yang dijalankan menggunaka
 
 ## Cara Build dan Deploy
 
-### 1. Build Docker Image
+### 1.  Build dan Push Docker Image dari Server Docker
 
 ```sh
-docker build -t static-html-nginx .
+# Build image (ganti "hidayat30" dengan username Docker Hub kamu)
+docker build -t hidayat30/custom-html:latest .
+ 
+# Login ke Docker Hub (jika belum)
+docker login -u userKamu
+ 
+# Push image ke Docker Hub
+docker push hidayat30/custom-html:latest
 ```
 
-### 2. Jalankan di Kubernetes (Minikube)
+### 2. Deploy ke Kubernetes
 
 ```sh
 kubectl apply -f deployment.yaml
@@ -31,7 +38,9 @@ kubectl apply -f service-nodeport.yaml
 Cari port NodePort yang digunakan, lalu akses melalui browser:
 
 ```
-minikube service static-html-service
+kubectl get svc custom-html-svc
+atau
+minikube service custom-html-svc --url
 ```
 
 ## Deskripsi
