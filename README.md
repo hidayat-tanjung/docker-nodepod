@@ -4,11 +4,12 @@ Repositori ini berisi contoh website statis sederhana yang dijalankan menggunaka
 
 ## Struktur File
 ```sh
-.
-├── deployment.yaml       # Kubernetes Deployment configuration
-├── service-nodeport.yaml # Kubernetes Service configuration
-├── index.html           # Static HTML content
-└── styles.css           # CSS styling
+custom-html/
+├── index.html             # Halaman utama website
+├── styles.css             # Style CSS
+├── Dockerfile             # Script build Docker image
+├── deployment.yaml        # YAML untuk deploy di Kubernetes (server berbeda)
+└── service-nodeport.yaml  
 ```
 
 ## Cara Build dan Deploy
